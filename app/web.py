@@ -20,7 +20,7 @@ from fastapi.templating import Jinja2Templates
 from app.content import DEFAULT_LANGUAGE, LANGUAGES, language_names, load
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_SITE_URL = "https://alexeibarbera.github.io"
+DEFAULT_SITE_URL = "https://alexeibarberaroca.github.io"
 IMAGE_EXTENSIONS = ("svg", "webp", "png", "jpg", "jpeg")
 
 # Página -> plantilla. "" es la portada.
