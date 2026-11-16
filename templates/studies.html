@@ -7,10 +7,14 @@
 
 {% for study in t.studies['items'] %}
 <article class="card" id="{{ study.slug }}">
-  <header class="item-header">
-    <p class="eyebrow">{{ study.level }}</p>
-    <h2>{{ study.name }}</h2>
-    <p class="meta">{{ study.school }} · {{ study.years }}</p>
+  <header class="item-header with-logo">
+    {% set logo = image('schools/' ~ study.slug) %}
+    {% if logo %}<img class="logo" src="{{ logo }}" alt="" width="56" height="56">{% endif %}
+    <div>
+      <p class="eyebrow">{{ study.level }}</p>
+      <h2>{{ study.name }}</h2>
+      <p class="meta">{{ study.school }} · {{ study.years }}</p>
+    </div>
   </header>
   <p>{{ study.summary }}</p>
 

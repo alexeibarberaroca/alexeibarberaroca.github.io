@@ -13,7 +13,8 @@
     "language": "Language",
     "not_found_title": "Page not found",
     "not_found_text": "This page doesn't exist or has moved.",
-    "back_home": "Back to home"
+    "back_home": "Back to home",
+    "menu": "Menu"
   },
   "nav": {
     "home": "Home",
@@ -132,7 +133,7 @@
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alexei-barbera-roca"
+        "url": "https://www.linkedin.com/in/alexeibarberaroca"
       },
       {
         "label": "GitHub",

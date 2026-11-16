@@ -32,7 +32,9 @@
         <span class="brand-mark" aria-hidden="true">AB</span>
         <span class="brand-name">{{ t.site.name }}</span>
       </a>
-      <nav aria-label="{{ t.ui.main_navigation }}">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="{{ t.ui.menu }}">
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
+      <nav class="mainnav" aria-label="{{ t.ui.main_navigation }}">
         <ul class="nav">
           {% for key in ['', 'experience', 'studies', 'projects', 'skills'] %}
           <li><a href="{{ url(page_path(lang, key)) }}"{% if key == page %} aria-current="page"{% endif %}>{{ t.nav[key or 'home'] }}</a></li>
