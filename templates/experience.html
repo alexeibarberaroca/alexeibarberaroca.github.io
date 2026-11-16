@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="page-header">
+  <h1>{{ t.pages.experience.title }}</h1>
+  <p class="lead">{{ t.experience.intro }}</p>
+</header>
+
+<ol class="timeline">
+  {% for job in t.experience.jobs %}
+  <li class="card" id="{{ job.slug }}">
+    <header class="item-header with-logo">
+      {% set logo = image('companies/' ~ job.slug) %}
+      {% if logo %}<img class="logo" src="{{ logo }}" alt="" width="56" height="56">{% endif %}
+      <div>
+        <h2>{% if job.url %}<a href="{{ job.url }}" target="_blank" rel="noopener">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}</h2>
+        <p class="meta">{{ job.location }} · {{ job.period }}</p>
+      </div>
+    </header>
+    {% for role in job.roles %}
+    <section class="role">
+      <h3>{{ role.title }} <span class="meta">· {{ role.period }}</span></h3>
+      <p>{{ role.text }}</p>
+      {% if role.tags %}
+      <ul class="tags">{% for tag in role.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </li>
+  {% endfor %}
+</ol>
+{% endblock %}

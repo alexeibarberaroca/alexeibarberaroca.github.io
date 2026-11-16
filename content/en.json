@@ -1,0 +1,489 @@
+{
+  "_meta": {
+    "name": "English",
+    "locale": "en_GB"
+  },
+  "site": {
+    "name": "Alexei Barberà Roca",
+    "description": "Junior PLC programmer and network systems administration technician. Industrial automation, Python and software development."
+  },
+  "ui": {
+    "skip_to_content": "Skip to content",
+    "main_navigation": "Main navigation",
+    "language": "Language",
+    "not_found_title": "Page not found",
+    "not_found_text": "This page doesn't exist or has moved.",
+    "back_home": "Back to home"
+  },
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "studies": "Education",
+    "projects": "Projects",
+    "skills": "Skills"
+  },
+  "pages": {
+    "": {
+      "title": "Home",
+      "description": "Junior PLC programmer and network systems administration technician. Industrial automation, Python and software development."
+    },
+    "experience": {
+      "title": "Professional experience",
+      "description": "Industrial automation at Btech, software quality and approval at Fujitsu, and IT support at UPC."
+    },
+    "studies": {
+      "title": "Education",
+      "description": "Higher VET diploma in Network Systems Administration and intermediate VET diploma in Microcomputer Systems and Networks."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Relative Developers: free, ad-free apps to explore science and everyday life."
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "Automation, programming, systems and networks, and how I work in a team."
+    }
+  },
+  "home": {
+    "photo_alt": "Photo of Alexei Barberà Roca",
+    "role": "Junior PLC programmer",
+    "intro": [
+      "I hold a higher VET diploma in Network Systems Administration and have a real passion for science and technology.",
+      "I currently work on industrial automation projects, combining my background in systems and networks with Siemens PLC programming. In my spare time I build apps with Python and Kotlin at Relative Developers."
+    ],
+    "cta_experience": "See experience",
+    "cta_cv": "Download CV",
+    "now": {
+      "title": "Right now",
+      "role": "Junior PLC programmer",
+      "company": "Barcelona Technical Center (Btech)",
+      "company_slug": "btech",
+      "text": "I program Siemens PLCs with TIA Portal for automotive production lines and build in-house Python tools to support the engineering team.",
+      "tags": [
+        "Siemens",
+        "TIA Portal",
+        "PLC",
+        "Python",
+        "Automotive"
+      ]
+    },
+    "explore_title": "Get to know me",
+    "interests_title": "Outside work",
+    "interests_text": "I like understanding how the world works, from cells to galaxies.",
+    "interests": [
+      {
+        "emoji": "💻",
+        "label": "Computing"
+      },
+      {
+        "emoji": "🧬🦠🧫🧪",
+        "label": "Genetics and biology"
+      },
+      {
+        "emoji": "🌌🚀🛸",
+        "label": "Astronomy and space"
+      },
+      {
+        "emoji": "🎨",
+        "label": "Art"
+      },
+      {
+        "emoji": "🎬",
+        "label": "Film"
+      },
+      {
+        "emoji": "🎤🎧🎼🎹",
+        "label": "Music and piano"
+      },
+      {
+        "emoji": "⛹️🏀",
+        "label": "Basketball"
+      },
+      {
+        "emoji": "🍣🍜🍙",
+        "label": "Japanese food"
+      }
+    ]
+  },
+  "cv": {
+    "title": "CV",
+    "text": "My CV, available in three languages:",
+    "files": [
+      {
+        "label": "CV in Spanish",
+        "lang": "es",
+        "url": "https://drive.google.com/file/d/1PGMg12nCMtqA0gnt_wrLLaj4k4H722-P/view?usp=drive_link"
+      },
+      {
+        "label": "CV in Catalan",
+        "lang": "ca",
+        "url": "https://drive.google.com/file/d/1WG_P6xBgIALBomfXBW4T3zKngNdwe6rP/view?usp=drive_link"
+      },
+      {
+        "label": "CV in English",
+        "lang": "en",
+        "url": "https://drive.google.com/file/d/1B-9YzzYkBC-Gj1I0iyyZyP4_Jnd71sNT/view?usp=drive_link"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "If you'd like to talk about an opportunity or a project, message me on LinkedIn.",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/alexei-barbera-roca"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/alexeibarbera"
+      }
+    ]
+  },
+  "experience": {
+    "intro": "From systems administration to industrial automation.",
+    "jobs": [
+      {
+        "slug": "btech",
+        "company": "Barcelona Technical Center (Btech)",
+        "url": "https://btechc.com/",
+        "location": "Zona Franca, Barcelona",
+        "period": "October 2025 – present",
+        "roles": [
+          {
+            "title": "Junior PLC programmer",
+            "period": "since June 2026",
+            "text": "I'm part of the automation team, working on industrial projects for automotive production lines. I program Siemens PLCs with TIA Portal and handle the configuration and commissioning of the related hardware: I/O modules, industrial network devices and safety components. I also build in-house Python tools to support the engineering work.",
+            "tags": [
+              "Siemens",
+              "TIA Portal",
+              "I/O",
+              "Industrial networks",
+              "Python"
+            ]
+          },
+          {
+            "title": "Technical administrative officer",
+            "period": "October 2025 – May 2026",
+            "text": "I provided technical and administrative support for order management, supplier control, invoicing and documentation, ensuring traceability and compliance with internal procedures. I worked mainly with SAP and with Microsoft Excel for data analysis and reporting.",
+            "tags": [
+              "SAP",
+              "Microsoft Excel"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "fujitsu",
+        "company": "Fujitsu Technology Solutions",
+        "url": "https://www.fujitsu.com/es/solutions/",
+        "location": "Cornellà de Llobregat",
+        "period": "September 2024 – September 2025",
+        "roles": [
+          {
+            "title": "Software approval specialist",
+            "period": "June – September 2025",
+            "text": "After finishing my dual training I joined the software approval team, where I validated software before it was packaged and distributed across the corporate environment.",
+            "tags": [
+              "Software approval",
+              "Corporate environment"
+            ]
+          },
+          {
+            "title": "Software quality assurance (dual VET)",
+            "period": "September 2024 – June 2025",
+            "text": "In the quality department I reviewed the technical documentation of each incoming piece of software and verified that it worked in the corporate environment, checking compatibility, stability and compliance with internal requirements. This validation allowed the approval process to move on to packaging and distribution.",
+            "tags": [
+              "Quality",
+              "Technical documentation"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "upc",
+        "company": "Universitat Politècnica de Catalunya (UPC)",
+        "url": "https://cbl.upc.edu/ca/els-serveis/cbltic",
+        "location": "Castelldefels",
+        "period": "January – April 2022",
+        "roles": [
+          {
+            "title": "Campus IT Services (work placement)",
+            "period": "January – April 2022",
+            "text": "I provided IT support to the Baix Llobregat Campus: computer maintenance, troubleshooting and writing technical records for follow-up. I also helped create multimedia content and provided technical support for the website.",
+            "tags": [
+              "IT support",
+              "Maintenance",
+              "Web"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "studies": {
+    "intro": "Vocational training in IT, from intermediate to higher level, with company placements.",
+    "knowledge_title": "Knowledge",
+    "placement_title": "Work placement",
+    "modules_title": "Course modules",
+    "items": [
+      {
+        "slug": "cfgs-asix",
+        "level": "Higher VET diploma (CFGS)",
+        "name": "Network Systems Administration",
+        "school": "Institut Bernat el Ferrer",
+        "years": "2023 – 2025",
+        "summary": "Administration of Windows and GNU/Linux servers, virtualisation, databases, IT security and network management. Dual training at Fujitsu Technology Solutions.",
+        "knowledge": [
+          "HTML and CSS",
+          "PL/SQL",
+          "Java",
+          "PHP",
+          "VirtualBox",
+          "Kali Linux",
+          "PowerShell"
+        ],
+        "placement": {
+          "company": "Fujitsu Technology Solutions",
+          "period": "2024 – 2025",
+          "text": "Software quality assurance and approval."
+        },
+        "courses": [
+          {
+            "title": "Year 1",
+            "modules": [
+              "M01 · Operating system deployment",
+              "M02 · Database management",
+              "M03 · Basic programming",
+              "M04 · Markup languages and information management systems",
+              "M09 · Web application deployment",
+              "M10 · Database management system administration",
+              "M12 · Business and entrepreneurship",
+              "M16 · Advanced programming",
+              "Career training and guidance",
+              "English"
+            ]
+          },
+          {
+            "title": "Year 2",
+            "modules": [
+              "M05 · Hardware fundamentals",
+              "M06 · Operating system administration",
+              "M07 · Network planning and administration",
+              "M08 · Network and Internet services",
+              "M11 · Security and high availability",
+              "M13 · Business and entrepreneurship",
+              "M14 · Network systems administration project",
+              "M15 · Workplace training"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "cfgm-smx",
+        "level": "Intermediate VET diploma (CFGM)",
+        "name": "Microcomputer Systems and Networks",
+        "school": "Institut Castellbisbal",
+        "years": "2020 – 2023",
+        "summary": "Computer assembly and maintenance, operating system installation, local area networks and user support.",
+        "knowledge": [
+          "GNU/Linux",
+          "Windows",
+          "Windows Server",
+          "Web applications",
+          "Cisco Packet Tracer",
+          "Arduino",
+          "SaltStack",
+          "Bash and shell scripting",
+          "Microsoft Office"
+        ],
+        "placement": {
+          "company": "Universitat Politècnica de Catalunya (UPC)",
+          "period": "2022",
+          "text": "Baix Llobregat Campus IT Services: computer maintenance, troubleshooting, technical records, multimedia content and website support."
+        },
+        "courses": [
+          {
+            "title": "Year 1",
+            "modules": [
+              "M01 · Computer assembly and maintenance",
+              "M02 · Single-user operating systems",
+              "M03 · Office applications",
+              "M05 · Local networks",
+              "M08 · Web applications",
+              "M11 · Technical English",
+              "M14 · Programming fundamentals"
+            ]
+          },
+          {
+            "title": "Year 2",
+            "modules": [
+              "M04 · Network operating systems",
+              "M06 · IT security",
+              "M07 · Network services",
+              "M09 · Career training and guidance",
+              "M10 · Business and entrepreneurship",
+              "M12 · Synthesis project"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "intro": "Outside work I build software under my own brand.",
+    "code_label": "Code",
+    "brand": {
+      "name": "Relative Developers",
+      "url": "https://relativedevelopers.com/",
+      "tagline": "Relative to you. Because knowledge depends on who's looking for it.",
+      "text": "Free, ad-free apps to explore science and everyday life: no selling data, scientific sources, and available in Spanish, Catalan and English.",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "Kotlin Multiplatform",
+        "Compose Multiplatform",
+        "Firebase"
+      ]
+    },
+    "groups": [
+      {
+        "title": "Available on the web",
+        "apps": [
+          {
+            "name": "DNAinvent",
+            "url": "https://relativedevelopers.com/dnainvent/",
+            "code": "https://github.com/RelativeDevelopers/DNAinvent",
+            "text": "Tools for DNA and RNA sequences, with a 3D microscope that goes all the way down to quarks."
+          },
+          {
+            "name": "AtomicWorld",
+            "url": "https://relativedevelopers.com/atomicworld/",
+            "code": "https://github.com/RelativeDevelopers/AtomicWorld",
+            "text": "From a molecule down to its quarks: periodic table, 3D atom and the first three minutes of the universe."
+          }
+        ]
+      },
+      {
+        "title": "In development · Android and iPhone",
+        "apps": [
+          {
+            "name": "ValidUntil",
+            "url": "https://relativedevelopers.com/validuntil/",
+            "code": "",
+            "text": "Never miss a date: reminds you before documents, insurance, vehicle inspections and warranties expire."
+          },
+          {
+            "name": "RelativeAge",
+            "url": "https://relativedevelopers.com/relativeage/",
+            "code": "",
+            "text": "Your life in seconds, weeks or years, across the animal kingdom and the Solar System."
+          },
+          {
+            "name": "MoneyMatters",
+            "url": "https://relativedevelopers.com/moneymatters/",
+            "code": "",
+            "text": "The value of your decisions. It informs, it doesn't advise: not financial advice."
+          }
+        ]
+      }
+    ],
+    "github_text": "My personal profile has other projects and experiments."
+  },
+  "skills": {
+    "intro": "What I can do and how I like to work.",
+    "technical_title": "Technical",
+    "technical": [
+      {
+        "title": "Industrial automation",
+        "items": [
+          "Siemens PLCs",
+          "TIA Portal",
+          "I/O modules",
+          "Industrial networks",
+          "Safety components",
+          "Commissioning"
+        ],
+        "icon": "⚙️"
+      },
+      {
+        "title": "Programming",
+        "items": [
+          "Python",
+          "FastAPI",
+          "Kotlin",
+          "Java",
+          "PHP",
+          "PL/SQL",
+          "HTML and CSS",
+          "Bash",
+          "PowerShell"
+        ],
+        "icon": "💻"
+      },
+      {
+        "title": "Systems and networks",
+        "items": [
+          "GNU/Linux",
+          "Windows Server",
+          "Virtualisation",
+          "Cisco Packet Tracer",
+          "SaltStack",
+          "IT security",
+          "Kali Linux"
+        ],
+        "icon": "🌐"
+      },
+      {
+        "title": "Tools and management",
+        "items": [
+          "Git and GitHub",
+          "SAP",
+          "Microsoft Excel",
+          "Microsoft Office",
+          "Arduino",
+          "Technical documentation"
+        ],
+        "icon": "🧰"
+      }
+    ],
+    "soft_title": "How I work",
+    "soft": [
+      {
+        "title": "Teamwork",
+        "text": "I coordinate with the rest of the team to reach shared goals, with clear communication and the flexibility to take on different roles.",
+        "icon": "🤝"
+      },
+      {
+        "title": "Autonomy",
+        "text": "I approach tasks systematically, prioritise them by importance and work to deadlines.",
+        "icon": "🧭"
+      },
+      {
+        "title": "Problem solving",
+        "text": "I enjoy new challenges: I look for the root cause of problems with an analytical and creative approach.",
+        "icon": "🧩"
+      },
+      {
+        "title": "Organisation and initiative",
+        "text": "I manage time and resources well and stay focused under pressure.",
+        "icon": "📋"
+      }
+    ],
+    "languages_title": "Languages",
+    "languages": [
+      {
+        "code": "es",
+        "label": "Spanish"
+      },
+      {
+        "code": "ca",
+        "label": "Catalan"
+      },
+      {
+        "code": "en",
+        "label": "English"
+      }
+    ]
+  }
+}

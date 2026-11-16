@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="page-header">
+  <h1>{{ t.pages.projects.title }}</h1>
+  <p class="lead">{{ t.projects.intro }}</p>
+</header>
+
+<article class="card">
+  <header class="item-header with-logo">
+    {% set logo = image('relativedevelopers') %}
+    {% if logo %}<img class="logo" src="{{ logo }}" alt="" width="64" height="64">{% endif %}
+    <div>
+      <h2><a href="{{ t.projects.brand.url }}" target="_blank" rel="noopener">{{ t.projects.brand.name }}</a></h2>
+      <p class="meta">{{ t.projects.brand.tagline }}</p>
+    </div>
+  </header>
+  <p>{{ t.projects.brand.text }}</p>
+  <ul class="tags">{% for tag in t.projects.brand.stack %}<li>{{ tag }}</li>{% endfor %}</ul>
+</article>
+
+{% for group in t.projects.groups %}
+<section aria-labelledby="group-{{ loop.index }}">
+  <h2 id="group-{{ loop.index }}">{{ group.title }}</h2>
+  <div class="grid">
+    {% for app in group.apps %}
+    <article class="card app">
+      <div class="with-logo">
+        {% set logo = image('apps/' ~ app.name | lower) %}
+        {% if logo %}<img class="logo" src="{{ logo }}" alt="" width="56" height="56">{% endif %}
+        <h3><a href="{{ app.url }}" target="_blank" rel="noopener">{{ app.name }}</a></h3>
+      </div>
+      <p>{{ app.text }}</p>
+      {% if app.code %}<p><a href="{{ app.code }}" target="_blank" rel="noopener">{{ t.projects.code_label }} →</a></p>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+
+<section aria-labelledby="github-title">
+  <h2 id="github-title">GitHub</h2>
+  <p>{{ t.projects.github_text }}</p>
+  <p><a class="button ghost" href="https://github.com/alexeibarbera" target="_blank" rel="noopener">github.com/alexeibarbera</a></p>
+</section>
+{% endblock %}

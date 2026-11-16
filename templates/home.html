@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block head %}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": t.site.name,
+  "jobTitle": t.home.role,
+  "worksFor": {"@type": "Organization", "name": t.home.now.company},
+  "url": site_url ~ url(page_path(lang, '')),
+  "sameAs": t.contact.links | map(attribute='url') | list
+} | tojson }}
+</script>
+{% endblock %}
+{% block content %}
+{% set photo = image('photo') %}
+<section class="hero{% if photo %} with-photo{% endif %}">
+  {% if photo %}
+  <img class="photo" src="{{ photo }}" alt="{{ t.home.photo_alt }}" width="240" height="240">
+  {% endif %}
+  <div>
+    <h1>{{ t.site.name }}</h1>
+    {% for paragraph in t.home.intro %}
+    <p class="lead">{{ paragraph }}</p>
+    {% endfor %}
+    <div class="actions">
+      <a class="button" href="{{ url(page_path(lang, 'experience')) }}">{{ t.home.cta_experience }}</a>
+      <a class="button ghost" href="#cv">{{ t.home.cta_cv }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="card now" aria-labelledby="now-title">
+  <h2 id="now-title" class="eyebrow">{{ t.home.now.title }}</h2>
+  <div class="with-logo">
+    {% set logo = image('companies/' ~ t.home.now.company_slug) %}
+    {% if logo %}<img class="logo" src="{{ logo }}" alt="" width="48" height="48">{% endif %}
+    <p class="now-role"><strong>{{ t.home.now.role }}</strong> · {{ t.home.now.company }}</p>
+  </div>
+  <p>{{ t.home.now.text }}</p>
+  <ul class="tags">
+    {% for tag in t.home.now.tags %}<li>{{ tag }}</li>{% endfor %}
+  </ul>
+</section>
+
+<section aria-labelledby="explore-title">
+  <h2 id="explore-title">{{ t.home.explore_title }}</h2>
+  <div class="grid">
+    {% for key in ['experience', 'studies', 'projects', 'skills'] %}
+    <a class="card link-card" href="{{ url(page_path(lang, key)) }}">
+      <h3>{{ t.pages[key].title }}</h3>
+      <p>{{ t.pages[key].description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="cv" aria-labelledby="cv-title">
+  <h2 id="cv-title">{{ t.cv.title }}</h2>
+  <p>{{ t.cv.text }}</p>
+  <ul class="cv-list">
+    {% for file in t.cv.files %}
+    {% set flag = image('flags/' ~ file.lang) %}
+    <li><a class="button ghost with-icon" href="{{ file.url }}" target="_blank" rel="noopener" hreflang="{{ file.lang }}">
+      {% if flag %}<img class="flag" src="{{ flag }}" alt="" width="28" height="20">{% endif %}{{ file.label }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section aria-labelledby="interests-title">
+  <h2 id="interests-title">{{ t.home.interests_title }}</h2>
+  <p>{{ t.home.interests_text }}</p>
+  <ul class="interests">
+    {% for item in t.home.interests %}
+    <li><span class="emoji" aria-hidden="true">{{ item.emoji }}</span><span>{{ item.label }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section aria-labelledby="contact-title">
+  <h2 id="contact-title">{{ t.contact.title }}</h2>
+  <p>{{ t.contact.text }}</p>
+  <ul class="cv-list">
+    {% for link in t.contact.links %}
+    <li><a class="button" href="{{ link.url }}" target="_blank" rel="me noopener">{{ link.label }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

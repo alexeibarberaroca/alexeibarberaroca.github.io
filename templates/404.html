@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">404</p>
+  <h1>{{ t.ui.not_found_title }}</h1>
+  <p class="lead">{{ t.ui.not_found_text }}</p>
+  <p><a class="button" href="{{ url(page_path(lang, '')) }}">{{ t.ui.back_home }}</a></p>
+</section>
+{% endblock %}

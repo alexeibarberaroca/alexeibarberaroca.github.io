@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="page-header">
+  <h1>{{ t.pages.studies.title }}</h1>
+  <p class="lead">{{ t.studies.intro }}</p>
+</header>
+
+{% for study in t.studies['items'] %}
+<article class="card" id="{{ study.slug }}">
+  <header class="item-header">
+    <p class="eyebrow">{{ study.level }}</p>
+    <h2>{{ study.name }}</h2>
+    <p class="meta">{{ study.school }} · {{ study.years }}</p>
+  </header>
+  <p>{{ study.summary }}</p>
+
+  <h3>{{ t.studies.knowledge_title }}</h3>
+  <ul class="tags">{% for item in study.knowledge %}<li>{{ item }}</li>{% endfor %}</ul>
+
+  <h3>{{ t.studies.placement_title }}</h3>
+  <p><strong>{{ study.placement.company }}</strong> · {{ study.placement.period }}</p>
+  <p>{{ study.placement.text }}</p>
+
+  <details>
+    <summary>{{ t.studies.modules_title }}</summary>
+    <div class="modules">
+      {% for course in study.courses %}
+      <div>
+        <h4>{{ course.title }}</h4>
+        <ul>{% for module in course.modules %}<li>{{ module }}</li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+  </details>
+</article>
+{% endfor %}
+{% endblock %}

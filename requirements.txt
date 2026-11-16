@@ -1,0 +1,8 @@
+# Web
+fastapi>=0.115
+uvicorn[standard]>=0.30
+jinja2>=3.1
+# TestClient: lo usan los tests y python main.py --build
+httpx>=0.27
+# Tests
+pytest>=8

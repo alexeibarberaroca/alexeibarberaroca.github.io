@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% set page_title = t.pages[page].title if page in t.pages else t.ui.not_found_title %}
+  <title>{% if page %}{{ page_title }} · {% endif %}{{ t.site.name }}</title>
+  <meta name="description" content="{{ t.pages[page].description if page in t.pages else t.site.description }}">
+  <meta name="author" content="{{ t.site.name }}">
+  <meta name="theme-color" content="#0f5c78">
+  {% if page in t.pages %}
+  <link rel="canonical" href="{{ site_url }}{{ url(page_path(lang, page)) }}">
+  {% for code in languages %}
+  <link rel="alternate" hreflang="{{ code }}" href="{{ site_url }}{{ url(page_path(code, page)) }}">
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ site_url }}{{ url(page_path('ca', page)) }}">
+  {% endif %}
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ t.site.name }}">
+  <meta property="og:description" content="{{ t.site.description }}">
+  <meta property="og:locale" content="{{ t._meta.locale }}">
+  <link rel="icon" href="{{ url('/static/img/favicon.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url('/static/css/style.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <a class="skip-link" href="#main">{{ t.ui.skip_to_content }}</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ url(page_path(lang, '')) }}">
+        <span class="brand-mark" aria-hidden="true">AB</span>
+        <span class="brand-name">{{ t.site.name }}</span>
+      </a>
+      <nav aria-label="{{ t.ui.main_navigation }}">
+        <ul class="nav">
+          {% for key in ['', 'experience', 'studies', 'projects', 'skills'] %}
+          <li><a href="{{ url(page_path(lang, key)) }}"{% if key == page %} aria-current="page"{% endif %}>{{ t.nav[key or 'home'] }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <nav class="langs" aria-label="{{ t.ui.language }}">
+        {% for code, name in languages.items() %}
+        <a href="{{ url(page_path(code, page if page in t.pages else '')) }}" hreflang="{{ code }}" lang="{{ code }}" title="{{ name }}"{% if code == lang %} aria-current="true"{% endif %}>{{ code | upper }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© {{ year }} {{ t.site.name }}</p>
+      <ul class="social">
+        {% for link in t.contact.links %}
+        <li><a href="{{ link.url }}" rel="me noopener" target="_blank">{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

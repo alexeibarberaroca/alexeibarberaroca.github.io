@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="page-header">
+  <h1>{{ t.pages.skills.title }}</h1>
+  <p class="lead">{{ t.skills.intro }}</p>
+</header>
+
+<section aria-labelledby="tech-title">
+  <h2 id="tech-title">{{ t.skills.technical_title }}</h2>
+  <div class="skill-grid">
+    {% for group in t.skills.technical %}
+    <article class="card skill-card tone-{{ loop.index }}">
+      <header class="skill-head">
+        <span class="skill-icon" aria-hidden="true">{{ group.icon }}</span>
+        <h3>{{ group.title }}</h3>
+        <span class="skill-count">{{ group['items'] | length }}</span>
+      </header>
+      <ul class="chips">
+        {% for item in group['items'] %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section aria-labelledby="soft-title">
+  <h2 id="soft-title">{{ t.skills.soft_title }}</h2>
+  <div class="soft-grid">
+    {% for item in t.skills.soft %}
+    <article class="card soft-card">
+      <span class="soft-icon" aria-hidden="true">{{ item.icon }}</span>
+      <div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section aria-labelledby="langs-title">
+  <h2 id="langs-title">{{ t.skills.languages_title }}</h2>
+  <ul class="language-list">
+    {% for item in t.skills.languages %}
+    {% set flag = image('flags/' ~ item.code) %}
+    <li class="card">
+      {% if flag %}<img class="flag" src="{{ flag }}" alt="" width="36" height="26">{% endif %}
+      <span>{{ item.label }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}
